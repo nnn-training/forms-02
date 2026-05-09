@@ -1,7 +1,7 @@
-import NextAuth, { NextAuthConfig } from "next-auth";
-import Google from "@auth/core/providers/google";
-import { UpstashRedisAdapter } from "@auth/upstash-redis-adapter";
-import { Redis } from "@upstash/redis";
+import Google from '@auth/core/providers/google';
+import { UpstashRedisAdapter } from '@auth/upstash-redis-adapter';
+import { Redis } from '@upstash/redis';
+import NextAuth, { type NextAuthConfig } from 'next-auth';
 
 const redis = new Redis({
   url: process.env.UPSTASH_REDIS_URL!,
